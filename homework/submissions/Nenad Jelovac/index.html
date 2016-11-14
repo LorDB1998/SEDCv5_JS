@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ATM</title>
+    </head>
+    <body>
+        <form action="">
+            QTY of Units: <input type="text" id="numberOfComps" value="0">
+           
+             <input type="button" name="submit" value="Submit" onclick="caluclateFullPrice();" />
+        </form>
+
+
+        
+        <script>
+            function caluclateFullPrice(){
+                
+                //setup local variables and simple math that I'll use
+                var standardString = "Total Price: " + "$";
+                var valueFromInputField = document.getElementById("numberOfComps").value;
+
+                //Using toFixed to set up the number of decimals, in this case to fixed 2
+                var calulation = (valueFromInputField * 119.95 * 1.05).toFixed(5);
+
+                //add to html document
+                document.write(standardString + calulation);
+            }           
+        </script>
+
+    </body>
+</html>
