@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nenad Trajkovikj</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#kopce').click(function(){
+                document.getElementById("calculation").innerHTML = "";
+                var tableti = $('#tableti').val();
+                var cena = $('#cena').val();
+                var danok = $('#danok').val();
+                if( $.isNumeric(tableti) && $.isNumeric(cena)
+                && $.isNumeric(danok) ){
+                    var netoCena = tableti * cena;
+                        document.getElementById("calculation").innerHTML += netoCena + netoCena * danok / 100;
+                }
+                else {
+                    alert("Not a valid input. Please make sure to insert numbers!");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <form id="atm">
+            Broj na tableti: <input id="tableti" type="text"/><br>
+            Cena po tablet: <input id="cena" type="text"/><br>
+            Danok(bez %): <input id="danok" type="text"/><br>
+        <input id="kopce" type="button" name="submit" value="Calculate gross price(price with tax included)"/>
+        </form>
+    </div>
+    <h2 id="calculation"></h2>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nenad Trajkovikj</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        function willLevelUp(current, needed, win) {
+                return parseFloat(current) + parseFloat(win) >= parseFloat(needed);
+        }
+        $(document).ready(function(){
+            $('#kopce').click(function(){
+                var currentExperience = $('#currentExperience').val();
+                var neededExperience = $('#neededExperience').val();
+                var winExperience = $('#winExperience').val();
+
+                if( $.isNumeric(currentExperience) && $.isNumeric(neededExperience)
+                        && $.isNumeric(winExperience) ){
+                    if( willLevelUp(currentExperience,neededExperience,winExperience) ) {
+                        document.getElementById("answer").innerHTML = "!!!YES, YOU WILL LEVEL UP!!!";
+                    }
+                    else {
+                        document.getElementById("answer").innerHTML = ":( SORRY, YOU WILL NOT LEVEL UP :(";
+                    }
+
+                }
+                else {
+                    alert("Not a valid input. Please make sure to insert numbers!");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <form id="atm">
+            the current amount of experience: <input id="currentExperience" type="text"/><br>
+            the total experience needed to level up: <input id="neededExperience" type="text"/><br>
+            the amount of experience you get when you win: <input id="winExperience" type="text"/><br>
+        <input id="kopce" type="button" name="submit" value="Will I Level Up?"/>
+        </form>
+    </div>
+    <h1 id="answer"></h1>
+
+</body>
+</html>

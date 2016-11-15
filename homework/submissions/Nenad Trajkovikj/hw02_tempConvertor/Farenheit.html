@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nenad Trajkovikj</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#kopce').click(function(){
+                document.getElementById('tocel').innerHTML = " To Celsius: ";
+                document.getElementById('tofar').innerHTML = " To Farenheit: ";
+                var far = $('#far').val();
+                var cel = $('#cel').val();
+                if(  $.isNumeric(far)  ){
+                    document.getElementById('tocel').innerHTML += ( (far- 32) / 1.8 ).toFixed(2);
+                }
+                if( $.isNumeric(cel) ){
+                    document.getElementById('tofar').innerHTML += (cel * 1.8 + 32).toFixed(2);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <form id="atm">
+            Fahrenheit: <input id="far" type="text"/><p id="tocel"> To Celsius: </p><br>
+            Celsius: <input id="cel" type="text"/><p id="tofar"> To Farenheit: </p><br>
+        <input id="kopce" type="button" name="submit" value="Calculate"/>
+        </form>
+    </div>
+
+</body>
+</html>
