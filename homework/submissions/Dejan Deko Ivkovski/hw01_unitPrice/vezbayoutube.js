@@ -5,7 +5,7 @@ function totalpriceOfTablets (ednaCenaodTableti, brojnatableti){
     var  priceWitouttax =  ednaCenaodTableti * brojnatableti;
 
     var totalpriceWithTax = priceWitouttax * 1.05;
-    var totalpriceWithTax = totalpriceWithTax.toFixed(1);
-    document.write("Cenata e " + totalpriceWithTax);
+    totalpriceWithTax = totalpriceWithTax.toFixed(1);
+    return ("Cenata e " + totalpriceWithTax);
 }
-totalpriceOfTablets(119.95, numbersOftablets);
+alert(totalpriceOfTablets(119.95, numbersOftablets));
