@@ -1,0 +1,1 @@
+1. Write a script that will calculate the price of 30 tablets, where the price of each is $119.95 and the tax rate is 5%.

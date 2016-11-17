@@ -1,0 +1,26 @@
+You're playing the latest Harry Potter videogame as an aspiring wizard, leveling up as you
+complete various objectives and courses throughout Hogwarts. You are very close to
+leveling up and you just can't wait to unlock that new transformation spell and
+as luck would have it, you are next up to do a friendly duel with one of your classmates
+in the Defence Against the Dark Arts class. You know how much experience you have and how
+much experience is needed to level up, as well as the amount of experience that you
+get when you win the duel.
+
+Can you calculate if you'll level up after the duel?
+
+HINTS:
+
+Define a function called willLevelUp, taking 3 parameters - 
+
+the current amount of experience - currentExperience,
+the total experience needed to level up - neededExperience,
+the amount of experience you get when you win - winExperience.
+
+Based on these, determine if after the duel you will reach the next level and learn the
+new spell. Return this as a result from the function.
+
+EXAMPLES:
+
+willLevelUp(1000, 1020, 40); - returns true as a result;
+willLevelUp(25299546, 25299766, 400); - returns true as a result;
+willLevelUp(2050, 3000, 600); - returns false as a result;
