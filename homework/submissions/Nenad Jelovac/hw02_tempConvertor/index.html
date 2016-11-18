@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Homework</title>
+    </head>
+    <body>
+
+        <h1>Temperature Converter</h1>
+        <!--Input element od koj ke se cita i vo koj ke se vpisuva konvertiranata vrednost
+        posle clickot na submit inputot (Convert dugmeto). Vo spanot se prikazuva Farenhajt simbolot. Inaku inicijalno ke
+        bide skrien spanot, i ke se pojavi od koga ke se izvrsi funkcijata (vidi funckija) -->
+        <input type="text" placeholder="Celsius to Fahrenheit" id="enterCelsius"><span hidden id="skrienSimbolF">&#8457</span>
+        <input type="submit" onclick="celsiusToFahrenheit()" value="Convert">
+
+        <!--Nov red x2-->
+        <br />
+        <br />
+
+        <!--Input element od koj ke se cita i vo koj ke se vpisuva konvertiranata vrednost
+        posle clickot na submit inputot (Convert dugmeto). Vo spanot se prikazuva Celsius simbolot. Inaku inicijalno ke
+        bide skrien spanot, i ke se pojavi od koga ke se izvrsi funkcijata (vidi funckija) -->
+        <input type="text" placeholder="Fahrenheit to Celsius" id="enterFahrenheit"><span hidden id="skrienSimbolC">&#8451</span>  
+        <input type="submit" onclick="fahrenheitToCelsius()" value="Convert">
+
+        <!--Povikuvanje na scripta vo koja se funkciite od inputite-->
+        <script type="text/javascript" src="calcDegrees.js">
+        </script>
+
+    </body>
+</html>

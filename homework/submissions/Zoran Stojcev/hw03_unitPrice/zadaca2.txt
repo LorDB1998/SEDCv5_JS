@@ -1,0 +1,24 @@
+
+var currentExperience = parseInt(prompt("please enter current Experience"));
+var neededExperience = parseInt(prompt("please enter needed Experience"));
+var winExperience = parseInt(prompt("please enter win Experience"));
+
+
+function willLevelUp(currentExperience , neededExperience , winExperience){
+
+    if (currentExperience + winExperience > neededExperience){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+var whatTheFunctionReturn = willLevelUp(currentExperience, neededExperience, winExperience);
+
+if (whatTheFunctionReturn){
+    
+    alert("you will level up!");
+}
+else {
+    alert("you still the same level!");
+}

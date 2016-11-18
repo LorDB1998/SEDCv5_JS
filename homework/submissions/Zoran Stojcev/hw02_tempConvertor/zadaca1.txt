@@ -1,0 +1,12 @@
+
+var celzius;
+
+var fahrenheit = parseInt(prompt("please enter fahrenheit temperature"));
+celzius =(fahrenheit - 32)* 5/9;
+alert(celzius);
+
+var fahrenheit2;
+
+var celzius2 = parseInt(prompt("please enter celzius temperature"));
+fahrenheit2 = (celzius2 * 9/5) +32;
+alert(fahrenheit2);
