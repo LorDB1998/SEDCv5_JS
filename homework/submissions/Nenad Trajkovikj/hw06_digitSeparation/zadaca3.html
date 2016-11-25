@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <script>
+        //implementacija so string
+        function writeDigitsString(string) {
+            for (var i = 0; i < string.length; i++) {
+                document.write(string.charAt(i) + "<br>");
+            }
+        }
+        //reverse so string
+        function writeDigitsStringReverse(string) {
+            for (var i = string.length - 1; i >= 0; i--) {
+                document.write(string.charAt(i) + "<br>");
+            }
+        }
+        // implementacija so array
+        function writeDigits(broj) {
+            var arr = [];
+            while (broj != 0) {
+                arr.push(broj % 10);
+                broj = Math.floor(broj / 10);
+            }
+            for (var i = arr.length - 1; i >= 0; i--)
+                document.write(arr[i] + "<br>");
+        }
+        //count digits pomosna
+        function countDigits(num) {
+            var count = 0;
+            var tmp = num;
+            while (tmp > 0) {
+                tmp = Math.floor(tmp / 10);
+                count++;
+            }
+            return count;
+        }
+        // reverse bez array, please make me stop :'(
+        function writeDigitsReverse(broj) {
+            var n = countDigits(broj);
+            for (var i = n - 1; i >= 0; i--) {
+                document.write((Math.floor(broj / (Math.pow(10, i))) % 10) + "<br>");
+            }
+        }
+
+        var input = prompt("vnesi broj");
+        var num = parseInt(input);
+        writeDigitsString(input);
+        document.write("<br>");
+        writeDigitsStringReverse(input);
+        document.write("<br>");
+        writeDigits(num);
+        document.write("<br>");
+        writeDigitsReverse(num)
+    </script>
+</body>
+
+</html>

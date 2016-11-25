@@ -1,0 +1,11 @@
+Write a JavaScript program that will read in an integer and write out its digits.
+
+ex. writeDigits(12321)
+
+writes out in the HTML
+
+1
+2
+3
+2
+1
