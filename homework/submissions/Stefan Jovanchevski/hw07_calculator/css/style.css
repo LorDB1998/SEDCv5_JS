@@ -1,0 +1,72 @@
+#frame {
+    background: beige;
+    width: 230px;
+    height: 220px;
+    padding: 2px 2px 2px 12px;
+    border: 3px solid;
+    border-radius: 15px;
+    margin: auto auto;
+}
+
+#display {
+    width: 167px;
+    height: 30px;
+    border-width: 5px;
+    border-radius: 8px;
+    background: #dee0e2;
+    float: right;
+    margin-right: 14px;
+    text-align: right;
+    font-style: bold;
+    font-size: 20px;
+}
+
+#keyboard {
+    float: left;
+}
+
+.button {
+    background: white;
+    width: 40px;
+    height: 30px;
+    color: darkslategray;
+    border-width: 1px;
+    border-color: darkslategray;
+    margin: 2px;
+    border-radius: 7px;
+    transition-duration: 0.4s;
+}
+
+.buttonDelete {
+    float: left;
+}
+
+.btnOperator {
+    width: 70px;
+}
+
+.btnEqual {
+    width: 89px;
+}
+
+.button:hover {
+    background: darkslategray;
+    color: white;
+    cursor: pointer;
+}
+
+.buttonDelete:hover {
+    background: #f44242;
+}
+
+.button__clicked {
+    background: darkslategray;
+    color: white;
+    transition-duration: 0.0s;
+}
+
+.buttonDelete__clicked {
+    background: #f44242;
+    color: white;
+    transition-duration: 0.0s;
+}
